@@ -1,48 +1,61 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+body
+{
+    height:100vh;
 }
-
-a {
-  color: #0077cc;
+.mainContainer
+{
+    display:flex;
+    flex-direction:row;
 }
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.toolbar
+{
+    color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    width:25%;
+    background-color:royalblue;
+    height:100%;
+    overflow-y:scroll;
 }
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.brand
+{
+    padding: 20px 0 5px 10px;
+    color:inherit;
+    font-size:4.2vh;
+    font-weight:400;
+    border-bottom: 3px solid snow;
 }
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
+.pages
+{
+    margin: 10px 0 0 20px;
 }
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+.pageLink
+{
+    width:100%;
+    color:white;
+    font-size:2.7vh;
+    text-decoration:none;
 }
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.renderBody
+{
+    margin-left:25%;
+    display:flex;
+    width:80vw;
 }
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+main
+{
+    width:100%;
 }
+main > div
+{
+    margin:20px 0 20px 0;
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+}
+.codeResult
+{
+    font-size:3vh;
+    margin-top: 50px;
 }

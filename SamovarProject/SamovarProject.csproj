@@ -6,4 +6,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\models\" />
+    <Folder Include="wwwroot\Новая папка1\" />
+    <Folder Include="wwwroot\Новая папка\Новая папка\" />
+  </ItemGroup>
+
 </Project>
