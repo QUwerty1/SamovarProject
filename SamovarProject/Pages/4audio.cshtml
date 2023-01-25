@@ -1,0 +1,37 @@
+﻿@page
+@model SamovarProject.Pages._4audioModel
+@{
+    Layout = null;
+}
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script>
+    AFRAME.registerComponent('soundhandler', { /// soundfinder;soundevent;
+        tick: function () {
+            var entity = document.querySelector('[sound]');
+
+            if (document.querySelector('a-marker').object3D.visible == true) {
+                entity.components.sound.playSound();//a-assets; a-camera;
+
+            } else {
+                entity.components.sound.pauseSound(); //playSound();pauseSound()
+            }
+        }
+    });
+</script>
+<body>
+    <a-scene embedded arjs soundhandler>
+        <a-assets>
+            <img crossorigin="anonymous" id="img" src="/assets/images/download.png">
+            <audio id="audio" src="/assets/audio/orkestr.mp3" crossorigin="anonymous"></audio>
+        </a-assets>
+
+        <a-marker preset='hiro'>
+            <a-plane src="#img" height="1" width="1" rotation="-90 0 0">
+                <a-sound src="#audio"></a-entity>
+            </a-plane>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@page
+@model SamovarProject.Pages._7multiMarkerModel
+@{
+    Layout = null;
+}
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<a-scene embedded ajs>
+    <a-assets>
+        <a-asset-item 
+            src="https://cdn.glitch.global/fb3e4ace-8100-4365-8fdc-9e2c2c51db5b/%D0%90%D1%80%D1%82%D1%83%D1%80.glb"
+            id="halop"
+        ></a-asset-item>
+        <a-asset-item 
+            src="https://cdn.glitch.global/fb3e4ace-8100-4365-8fdc-9e2c2c51db5b/%D0%9D%D0%B8%D0%BA%D0%B8%D1%82%D0%B0.glb"
+            id="tsar"
+        ></a-asset-item>
+        <a-asset-item 
+            src="https://cdn.glitch.global/fb3e4ace-8100-4365-8fdc-9e2c2c51db5b/%D0%9C%D0%B0%D1%82%D0%B2%D0%B5%D0%B9.glb"
+            id="clown"
+        ></a-asset-item>
+    </a-assets>
+    <a-marker preset="hiro">
+        <a-entity
+                  gltf-model="#tsar"
+                  rotation="-90 0 0"
+                  position="0 -1 0"></a-entity>
+    </a-marker>
+    <a-marker preset='kanji'>
+        <a-entity gltf-model="#halop"
+                  rotation="-90 0 0"
+                  position="0 -1 0"></a-entity>
+    </a-marker>
+    <a-marker preset="pattern" type='pattern' url="https://cdn.glitch.global/fb3e4ace-8100-4365-8fdc-9e2c2c51db5b/pattern-marker.patt?v=1674631442935">
+        <a-entity gltf-model="#clown"
+                  rotation="0 0 0"
+                  position="0 -1 0"></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>

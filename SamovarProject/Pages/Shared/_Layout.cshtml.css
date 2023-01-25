@@ -3,11 +3,15 @@ for details on configuring this project to bundle and minify static web assets. 
 body
 {
     height:100vh;
+    width:100vw;
 }
-.mainContainer
-{
-    display:flex;
-    flex-direction:row;
+.mainContainer {
+    display: flex;
+    flex-direction: row;
+    background-image: url(https://cdn.glitch.global/fb3e4ace-8100-4365-8fdc-9e2c2c51db5b/photo_2023-01-25_15-06-21.jpg);
+    background-clip:border-box;
+    background-size:cover;
+    min-height:100%;
 }
 .toolbar
 {
@@ -24,9 +28,15 @@ body
 {
     padding: 20px 0 5px 10px;
     color:inherit;
-    font-size:4.2vh;
+    font-size:5vh;
     font-weight:400;
     border-bottom: 3px solid snow;
+}
+.logo
+{
+    width:50px;
+    margin-left:10px;
+    color:white;
 }
 .pages
 {
@@ -41,9 +51,12 @@ body
 }
 .renderBody
 {
-    margin-left:25%;
+    margin-left:27%;
     display:flex;
     width:80vw;
+    margin-top:2%;
+    height:100%;
+
 }
 main
 {
@@ -58,4 +71,14 @@ main > div
 {
     font-size:3vh;
     margin-top: 50px;
+}
+a-scene
+{
+    height:80vh;
+    width:70vw;
+}
+img
+{
+    border-radius:10px;
+    width:50%;
 }

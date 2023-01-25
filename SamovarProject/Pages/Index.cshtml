@@ -2,11 +2,12 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    ViewData["pageLink"] = "";
+    ViewData["code"] = "";
 }
-
-<link rel="stylesheet" type="text/css" href="~/css/index.css"/>
-<div class="text-center">
-    <h3>Главная страница</h3>
-
-    <h3>Слева представлены все проекты сделаные нами</h3>
-</div>
+<style>
+    .codeSource
+    {
+        display:none;
+    }
+</style>

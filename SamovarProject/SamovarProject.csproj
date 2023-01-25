@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
-    <Folder Include="wwwroot\models\" />
+    <Folder Include="wwwroot\models\Новая папка\" />
     <Folder Include="wwwroot\Новая папка1\" />
     <Folder Include="wwwroot\Новая папка\Новая папка\" />
   </ItemGroup>
